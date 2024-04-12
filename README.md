@@ -18,7 +18,7 @@ Para que a integração seja realizada, precisamos da **url da API**
 Por isso, é necessário colocar o endereço no nosso .env
 
 ```dotenv
-DOMMUS_URL=https://agenciafmd.secure.force.com/services/apexrest/LeadConnector
+DOMMUS_URL=https://api.leads.dommus.com.br/webhook/forms/
 DOMMUS_TOKEN=seu_token
 ```
 
