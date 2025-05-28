@@ -1,6 +1,6 @@
 ## Laravel - Dommus
 
-[//]: # ([![Downloads]&#40;https://img.shields.io/packagist/dt/agenciafmd/laravel-dommus.svg?style=flat-square&#41;]&#40;https://packagist.org/packages/agenciafmd/laravel-dommus&#41;)
+[![Downloads](https://img.shields.io/packagist/dt/agenciafmd/laravel-dommus.svg?style=flat-square)](https://packagist.org/packages/agenciafmd/laravel-dommus)
 [![Licença](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
 - Envia as conversões para a Dommus
@@ -8,7 +8,7 @@
 ## Instalação
 
 ```bash
-composer require agenciafmd/laravel-dommus:dev-master
+composer require agenciafmd/laravel-dommus:v11.x-dev
 ```
 
 ## Configuração
@@ -21,7 +21,6 @@ Por isso, é necessário colocar o endereço no nosso .env
 DOMMUS_URL=https://api.leads.dommus.com.br/webhook/forms/
 DOMMUS_TOKEN=seu_token
 ```
-
 
 ## Uso
 

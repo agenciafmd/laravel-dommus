@@ -13,18 +13,18 @@ class DommusServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-        $this->loadConfigs();
-        $this->publish();
+        $this->registerConfigs();
+        $this->registerPublish();
     }
 
-    protected function publish(): void
+    private function registerPublish(): void
     {
         $this->publishes([
             __DIR__ . '/../config/laravel-dommus.php' => base_path('config/laravel-dommus.php'),
         ], 'laravel-dommus:configs');
     }
 
-    protected function loadConfigs(): void
+    private function registerConfigs(): void
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/laravel-dommus.php', 'laravel-dommus');
     }

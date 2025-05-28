@@ -18,12 +18,7 @@ class SendConversionsToDommus implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    private array $data;
-
-    public function __construct(array $data = [])
-    {
-        $this->data = $data;
-    }
+    public function __construct(private readonly array $data = []) {}
 
     public function handle(): void
     {
@@ -33,7 +28,7 @@ class SendConversionsToDommus implements ShouldQueue
 
         $client = $this->getClientRequest();
 
-        $fullPhone = only_numbers($this->data['phone'] ?? '(99) 99999-9999');
+        $fullPhone = preg_replace('/\D/', '', $this->data['phone'] ?? '(99) 99999-9999');
         $ddd = substr($fullPhone, 0, 2);
         $phone = substr($fullPhone, 2);
         $fields = [
