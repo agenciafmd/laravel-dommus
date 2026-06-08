@@ -8,7 +8,7 @@
 ## Instalação
 
 ```bash
-composer require agenciafmd/laravel-dommus:v11.x-dev
+composer require agenciafmd/laravel-dommus:v12.x-dev
 ```
 
 ## Configuração
